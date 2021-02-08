@@ -1,0 +1,493 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap");
+/*===== VARIABLES CSS Y SASS =====*/
+/*Varibles sass*/
+/*Variables css*/
+/*===== Colores =====*/
+:root {
+	--color1: rgb(219,144,.5);				/* Color Naranja*/
+	--color2: rgba(23, 180, 83, 0.877);		/* Color Verde*/
+	--color3: rgba(11,194,211, 0.623);		/* Color */
+	--color4: #fff;							/* Color Blanco*/
+	--color5: #000;							/* Color Negro*/
+	--color6: #BDBDBD;
+	--color7: crimson;
+	--color8: #12192C;
+	--color9: #F5A623;
+	--color10: #EDEDED;
+	--color11: #000;
+}
+main{
+	width: 100%;
+	max-width: 1150px; /*Tamaño de la caja interna - Main*/
+	margin: auto;	
+}
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+}
+/* *.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.* */
+/* *. all similar content styling codes                                   Diseñado por Gustavo Chaaprro .*.* */
+/* *.                                                                                                   .*.* */
+/* *.                                                                                                   .*.* */
+/* *.                                                                     Caracas, Creado 12 Ene 2021   .*.* */
+/* *.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.* */
+section{
+    padding: 100px 0;
+}
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+.play, footer{
+  font-family: 'AvantGarde';
+}
+.play .play-content{
+	background:;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+section .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+section .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+section .title::after{
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    font-size: 20px;
+    color: var(--color1);
+    padding: 0 5px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+/* *.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.* */
+/* *. Menu Lateral - Sidebar menu                                         Diseñado por Gustavo Chaaprro .*.* */
+/* *.                                                                                                   .*.* */
+/* *.                                                                                                   .*.* */
+/* *.                                                                     Caracas, Creado 25 Ene 2021   .*.* */
+/* *.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.* */
+
+/*===== Fuente y tipografia =====*/
+:root {
+  --body-font: 'Quicksand', sans-serif;
+  --small-font-size: 0.875rem;
+}
+@media screen and (min-width: 768px) {
+  :root {
+    --small-font-size: 0.938rem;
+  }
+}
+/*===== z index =====*/
+:root {
+  --z-back: -10;
+  --z-normal: 1;
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+}
+/*===== BASE =====*/
+*, ::before, ::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+body {
+  position: relative;
+  margin: 0;
+  padding: 1rem 0 0 5rem;
+  font-family: var(--body-font);
+  background-color: var(--color4);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+h1 {
+  margin: 0;
+}
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+/*=====  NAV =====*/
+.l-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 56px;
+  height: 100vh;
+  background-color: var(--color5);
+  padding: 1.25rem .5rem 2rem;
+  -webkit-transition: .5s;
+  transition: .5s;
+  z-index: var(--z-fixed);
+}
+.nav {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  overflow: hidden;
+}
+.nav__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2rem;
+  padding: 0 .5rem;
+}
+.nav__logo-icon {
+  margin-right: 1.2rem;
+}
+.nav__logo-text {
+  color: var(--color10);
+  font-weight: 700;
+}
+.nav__toggle {
+  position: absolute;
+  top: 1.10rem;
+  right: -.6rem;
+  width: 18px;
+  height: 18px;
+  background-color: var(--color9);
+  border-radius: 50%;
+  font-size: 1.25rem;
+  color: var(--color8);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+.nav__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: .5rem;
+  margin-bottom: 1rem;
+  border-radius: .5rem;
+  color: var(--color10);
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+.nav__link:hover {
+  background-color: var(--color9);
+  color: var(--color8);
+}
+.nav__icon {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+.nav__text {
+  font-weight: 700;
+}
+/*Show menu*/
+.show {
+  width: 168px;
+}
+/*Rotate toggle*/
+.rotate {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+/*Active links menu*/
+.active {
+  background-color: var(--color9);
+  color: var(--color8);
+}
+/*Add padding body*/
+.expander {
+  padding: 1rem 0 0 12rem;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+/* *.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.* */
+/* *. play section styling                                                Diseñado por Gustavo Chaaprro .*.* */
+/* *.                                                                                                   .*.* */
+/* *.                                                                                                   .*.* */
+/* *.                                                                     Caracas, Creado 12 Ene 2021   .*.* */
+/* *.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.* */
+.play{
+    color:#fff;
+    background: #111;
+}
+.play .title::before{
+    background: #fff;
+}
+.play .title::after{
+    content: "Pruebalo";
+	background: #111;
+}
+*::selection {
+	background:#33257E ;
+	color:#fff;
+}
+*::-moz-selection {
+	background:#33257E;
+	color:#fff;
+}
+.contenedor {
+	max-width:500px;
+	width: 90%;
+	margin: 40px auto;
+}
+/* ------------------------- */
+/* Logotipo */
+/* ------------------------- */
+.logo { 
+	margin-bottom: 40px;
+	width: 100%;
+	text-align: center;
+}
+.logo img { 
+	width: 100%;
+	vertical-align: top;
+ }
+/* ------------------------- */
+/* Estilos de Filas y Columnas */
+/* ------------------------- */
+.app .fila {
+	margin-bottom: 40px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.app .col {
+	width: 50%;
+}
+/* ------------------------- */
+/* Estilos generales de inputs y botones */
+/* ------------------------- */
+.app label {
+	line-height: 40px;
+}
+.app input {
+	text-align: center;
+	border: none;
+}
+.app .btn {
+	width: 100%;
+	background: var(--color1);
+	color: #fff;
+	display: inline-block;
+	height: 40px;
+	vertical-align: top;
+	font-size: 16px;
+	text-align: center;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: all .3s ease;
+}
+
+.app .btn:hover {
+	background: #666666;
+}
+
+.app .btn.false{
+	background: var(--color1);
+}
+
+/* ------------------------- */
+/* Fila: Numero de Caracteres */
+/* ------------------------- */
+.app .numero-caracteres .botones div {
+	width: 100%;
+}
+
+.app .numero-caracteres .botones div:nth-child(1) button{
+	border-radius: 4px 0 0 4px;
+}
+.app .numero-caracteres input {
+	height: 40px;
+	width: 100%;
+	cursor: default;
+	background: #666666;
+	color: #fff;
+}
+.app .numero-caracteres .botones div:nth-child(3) button{
+	border-radius: 0 4px 4px 0;
+}
+.app .numero-caracteres .botones{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+/* ------------------------- */
+/* Fila: Generar Contraseña */
+/* ------------------------- */
+.app .fila.generar {
+	margin-bottom: 10px;
+}
+.app .fila.generar .col:nth-child(1){
+	width: 30%;
+}
+.app .fila.generar .col:nth-child(2) {
+	width: 65%;
+}
+.app .fila.generar .btn.btn-generar {
+	width: 100%;
+	height: 40px;
+	font-size: 18px;
+	padding: 0;
+	line-height: 40px;
+	position: relative;
+	z-index: 1;
+}
+.app .fila.generar .btn.btn-generar i {
+	margin-left: 20px;
+	position: relative;
+	top:-1px;
+	font-size: 14px;
+}
+.app .fila.generar .btn.btn-generar:after {
+	content: "";
+	display: inline-block;
+	background: #666666;
+	width: 14px;
+	height: 14px;
+	position: absolute;
+	top:13px;
+	right:-7px;
+	transform: rotate(45deg);
+	z-index: 9;
+	transition: all .3s ease;
+}
+.app .fila.generar .col:nth-child(1):hover .btn-generar:after {
+	background: #B4A5FF;
+}
+.app .fila.generar .input-password {
+	width: 100%;
+	background: none;
+	border-radius: 4px;
+	border:1px solid rgba(255,255,255,.25);
+	color: #fff;
+	height: 40px;
+	line-height: 40px;
+	cursor: pointer;
+	transition: all .3s ease;
+}
+.app .fila.generar .input-password:hover {
+	border:1px solid rgba(255,255,255,.5);
+}
+.app .fila.generar input::selection {
+	background: #212139;
+}
+.app .fila.generar input::-moz-selection {
+	background: #212139;
+}
+/* ------------------------- */
+/* Fila: Alerta */
+/* ------------------------- */
+.app .fila.alerta {
+	justify-content: flex-end;
+}
+.app .fila.alerta .col {
+	width: 65%;
+}
+.app .fila.alerta .alerta-copiado {
+	text-align: center;
+	color: rgba(255,255,255,0);
+	transition: all .3s ease;
+}
+.app .fila.alerta .alerta-copiado.active {
+	color: rgba(255,255,255,1);
+}
+.app .fila.alerta .alerta-copiado p, 
+.app .fila.alerta .alerta-copiado i {
+	font-size: 12px;
+}
+/* ------------------------- */
+/* Media Queries */
+/* ------------------------- */
+@media screen and (max-width: 500px){
+	.logo img {
+		width: 70%;
+	}
+	.app .fila {
+		flex-direction: column;
+		margin-bottom: 20px;
+	}
+	.app .fila .col {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	.app .fila.generar {
+		border-top:1px solid rgba(255,255,255,.25);
+		padding-top:40px;
+	}
+	.app .fila.generar .col:nth-child(1), 
+	.app .fila.generar .col:nth-child(2) {
+		width: 100%;
+	}
+	.app .fila.generar .btn.btn-generar:after {
+		top: auto;
+		left: 50%;
+		right: 50%;
+		bottom: -7px;
+	}
+}
+/* *.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.* */
+/* *. footer section styling                                              Diseñado por Gustavo Chaaprro .*.* */
+/* *.                                                                                                   .*.* */
+/* *.                                                                                                   .*.* */
+/* *.                                                                     Caracas, Creado 12 Ene 2021   .*.* */
+/* *.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.* */
+footer{
+    background: #111;
+    padding: 15px 23px;
+    color: #fff;
+    text-align: center;
+}
+footer span a{
+    color: var(--color1);
+    text-decoration: none;
+}
+footer span a:hover{
+    text-decoration: underline;
+}
